@@ -5,6 +5,7 @@ from service.models import Customer
 
 class CustomerSerializer(serializers.ModelSerializer):
 
+    service_advisor = serializers.StringRelatedField(read_only=True)
     class Meta:
 
         model = Customer
