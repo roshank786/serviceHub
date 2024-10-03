@@ -13,4 +13,6 @@ urlpatterns = [
 
     path('customers/<int:pk>/',views.CustomerRetreiveUpdateDestroyView.as_view()),
 
+    path('customers/<int:pk>/add-work/',views.WorkCreateView.as_view()),
+
 ]
