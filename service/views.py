@@ -25,3 +25,14 @@ class CustomerListCreateView(generics.ListCreateAPIView):
         return serializer.save(service_advisor = self.request.user)
 
 
+
+class CustomerRetreiveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+
+    queryset = Customer.objects.all()
+
+    serializer_class = CustomerSerializer
+
+    authentication_classes = [authentication.TokenAuthentication]
+
+    permission_classes = [permissions.IsAdminUser]
+

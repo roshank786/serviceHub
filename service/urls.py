@@ -11,4 +11,6 @@ urlpatterns = [
 
     path('customers/',views.CustomerListCreateView.as_view()),
 
+    path('customers/<int:pk>/',views.CustomerRetreiveUpdateDestroyView.as_view()),
+
 ]
